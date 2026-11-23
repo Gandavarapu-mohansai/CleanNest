@@ -1,0 +1,297 @@
+/* ================
+admin_login.php 
+================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dff5ee, #f5f9f7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 400px;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h1 {
+  color: seagreen;
+  margin-bottom: 10px;
+}
+
+.login-container h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.login-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: seagreen;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #176b45;
+}
+
+.login-container a {
+  display: inline-block;
+  margin-top: 20px;
+  color: seagreen;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+.login-container .error {
+  color: red;
+  background: #ffe5e5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ================
+Admin Dashboard 
+==================*/
+
+.admin-header {
+  background: seagreen;
+  color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header h2 {
+  font-size: 24px;
+}
+
+.admin-header span {
+  margin-right: 20px;
+}
+
+.logout-btn {
+  background: white;
+  color: seagreen;
+  padding: 9px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  background: #e5f5ed;
+}
+
+.dashboard-container {
+  width: 90%;
+  margin: 35px auto;
+}
+
+.dashboard-container h1 {
+  color: #245c43;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid seagreen;
+}
+
+.stat-card h3 {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.stat-card h2 {
+  color: seagreen;
+  font-size: 30px;
+}
+
+.section-title {
+  color: #245c43;
+  margin-bottom: 20px;
+}
+
+.management-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.management-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.management-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.management-card h3 {
+  color: seagreen;
+  margin-bottom: 10px;
+}
+
+.management-card p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .management-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stats-container,
+  .management-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* Dashboard Body Fix */
+
+body.admin-dashboard {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dff5ee, #f5f9f7);
+}
+
+/* Dashboard Header */
+
+.admin-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+}
+
+/* Dashboard Content */
+
+.dashboard-container {
+  width: 90%;
+  margin: 35px auto;
+}
+
+/* Recent Bookings */
+
+.recent-bookings {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.recent-bookings table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.recent-bookings th {
+  background: seagreen;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.recent-bookings td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.recent-bookings tr:hover {
+  background: #f0f8f4;
+}
+
+.booking-status {
+  background: #e0f2e9;
+  color: #176b45;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}

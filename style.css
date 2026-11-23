@@ -1,0 +1,2071 @@
+/* =================================
+   GENERAL STYLES
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: honeydew;
+  margin: 0;
+}
+
+/* =================================
+   COMMON NAVIGATION
+================================= */
+
+header {
+  background-color: seagreen;
+  color: white;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  margin: 0;
+}
+
+.logo span,
+.footer-about span {
+  color: palegreen;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: palegreen;
+}
+
+.register-btn {
+  background-color: white;
+  color: seagreen;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.register-btn:hover {
+  background-color: honeydew;
+  color: darkgreen;
+}
+
+/* =================================
+   HOME PAGE - HERO SECTION
+================================= */
+
+.hero {
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  padding: 50px 8%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 650px;
+  color: white;
+  margin: auto;
+}
+
+.hero-small,
+.section-small {
+  color: seagreen;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero-small {
+  color: palegreen;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.hero h2 {
+  font-size: 25px;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.book-btn {
+  display: inline-block;
+  background-color: seagreen;
+  color: white;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.book-btn:hover {
+  background-color: darkgreen;
+}
+
+/* =================================
+   HOME PAGE - SERVICES SECTION
+================================= */
+
+.services {
+  text-align: center;
+  padding: 65px 5%;
+}
+
+.services h2,
+.about h2,
+.why-us h2,
+.how-it-works h2,
+.review h2 {
+  color: darkslategrey;
+  font-size: 32px;
+}
+
+.section-description {
+  color: dimgray;
+  margin-bottom: 40px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.service-card {
+  background-color: white;
+  width: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 2px 2px 12px lightgray;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.service-card h3 {
+  color: seagreen;
+}
+
+.service-card p {
+  color: dimgray;
+  line-height: 1.5;
+}
+
+.service-card h4 {
+  color: darkgreen;
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 40px;
+  background-color: seagreen;
+  color: white;
+  padding: 13px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.view-btn:hover {
+  background-color: darkgreen;
+}
+
+/* =================================
+   HOME PAGE - ABOUT SECTION
+================================= */
+
+.about {
+  padding: 75px 10%;
+  text-align: center;
+  background-color: white;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.about p {
+  color: dimgray;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* =================================
+   HOME PAGE - WHY CHOOSE US
+================================= */
+
+.why-us {
+  text-align: center;
+  padding: 65px 5%;
+  background-color: honeydew;
+}
+
+.why-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.why-card {
+  background-color: white;
+  width: 220px;
+  padding: 25px 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px lightgray;
+}
+
+.why-card h3 {
+  color: seagreen;
+}
+
+.why-card p {
+  color: dimgray;
+  line-height: 1.6;
+}
+
+/* =================================
+   HOME PAGE - HOW IT WORKS
+================================= */
+
+.how-it-works {
+  text-align: center;
+  padding: 65px 5%;
+  background-color: white;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.step {
+  width: 220px;
+  padding: 15px;
+}
+
+.step h3 {
+  font-size: 35px;
+  color: seagreen;
+}
+
+.step h4 {
+  color: darkslategrey;
+}
+
+.step p {
+  color: dimgray;
+  line-height: 1.5;
+}
+
+/* =================================
+   HOME PAGE - REVIEWS
+================================= */
+
+.review {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: honeydew;
+}
+
+.review-card {
+  background-color: white;
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px lightgray;
+}
+
+.review-card h3 {
+  color: seagreen;
+}
+
+.review-card p {
+  color: dimgray;
+  line-height: 1.7;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+  background-color: darkslategrey;
+  color: white;
+  padding: 45px 7% 15px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-about {
+  max-width: 250px;
+}
+
+.footer-about h2 {
+  color: white;
+}
+
+.footer-about p {
+  line-height: 1.6;
+  color: gainsboro;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  color: palegreen;
+}
+
+.footer-links a {
+  color: gainsboro;
+  text-decoration: none;
+  margin: 7px 0;
+}
+
+.footer-links a:hover {
+  color: palegreen;
+}
+
+.footer-contact p {
+  color: gainsboro;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid gray;
+  margin-top: 35px;
+  padding-top: 15px;
+  color: gainsboro;
+}
+
+/* =================================
+   REGISTRATION PAGE DESIGN
+================================= */
+
+.register-page {
+  width: 550px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.register-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: seagreen;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.form-row label {
+  width: 170px;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 15px;
+  color: darkslategrey;
+  font-weight: bold;
+}
+
+.form-row input {
+  width: 50%;
+  padding: 11px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.form-row input:focus {
+  outline: none;
+  border: 1px solid seagreen;
+}
+
+.register-page button {
+  display: block;
+  width: 150px;
+  margin: 30px auto 15px;
+  padding: 13px;
+  background-color: seagreen;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.register-page button:hover {
+  background-color: darkgreen;
+}
+
+.message {
+  text-align: center;
+  color: seagreen;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.login-link a {
+  color: seagreen;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+/* Registration Page Background */
+
+body:has(.register-page) {
+  min-height: 100vh;
+
+  background: url("images/reg.jpg.jpg");
+
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: darkslategrey;
+}
+/* =================================
+   LOGIN PAGE DESIGN
+================================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 25px 25px;
+
+  background: url("images/login.jpg");
+
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.login-page > h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+.login-page form {
+  width: 380px;
+  max-width: 100%;
+  padding: 35px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.login-page label {
+  display: block;
+  margin-bottom: 8px;
+  color: darkslategrey;
+  font-weight: bold;
+}
+
+.login-page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid silver;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.login-page input:focus {
+  outline: none;
+  border: 1px solid seagreen;
+}
+
+.login-page button {
+  width: 100%;
+  padding: 13px;
+  background-color: seagreen;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.login-page button:hover {
+  background-color: darkgreen;
+}
+
+.login-page p {
+  text-align: center;
+  color: seagreen;
+  margin-top: 20px;
+}
+
+.login-page .login-message {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* =================================
+   SERVICES PAGE
+================================= */
+
+.services-page {
+  min-height: 100vh;
+  background-color: #f5f8f6;
+  color: #263b32;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+
+.services-page header {
+  background-color: seagreen;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-page header h2 {
+  color: white;
+  font-size: 28px;
+  margin: 0;
+}
+
+.services-page nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.services-page nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  margin: 7px;
+  transition: 0.3s;
+}
+
+.services-page nav a:hover {
+  color: palegreen;
+}
+
+/* Main Sections */
+
+.services-page section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 45px 7%;
+}
+
+.services-page section h1 {
+  text-align: center;
+  color: #226b49;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.services-page section > p {
+  text-align: center;
+  color: #718078;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+/* Service Grid */
+
+.services-page .service-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Service Cards */
+
+.services-page .service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 190px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e3eee7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.services-page .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+  border-color: #9acbb0;
+}
+
+.services-page .service-card h3 {
+  color: #26764f;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.services-page .service-card p {
+  color: #718078;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 45px;
+}
+
+.services-page .service-card h4 {
+  color: #263b32;
+  font-size: 17px;
+  margin: 18px 0;
+}
+
+/* Service Selection */
+
+.services-page .service-card label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: honeydew;
+  border-radius: 6px;
+  color: #26764f;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.services-page .service-card label:hover {
+  background-color: #d9f0df;
+}
+
+.services-page input[type="checkbox"],
+.services-page input[type="radio"] {
+  accent-color: seagreen;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.services-page input:disabled {
+  cursor: not-allowed;
+}
+
+/* Clear Package Button */
+
+.services-page #clear-package {
+  display: block;
+  margin: 25px auto 0;
+  padding: 11px 25px;
+  background-color: white;
+  color: seagreen;
+  border: 1px solid seagreen;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.services-page #clear-package:hover {
+  background-color: seagreen;
+  color: white;
+}
+
+/* Booking Summary */
+
+.services-page .booking-summary {
+  max-width: 500px;
+  margin: 40px auto 10px;
+  padding: 25px;
+  background-color: #e6f4eb;
+  border: 1px solid #b9ddc7;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px lightgray;
+}
+
+.services-page .booking-summary h2 {
+  color: #226b49;
+  margin-bottom: 15px;
+}
+
+.services-page .booking-summary h3 {
+  color: seagreen;
+  font-size: 23px;
+}
+
+/* Continue Booking Button */
+
+.services-page button[type="submit"] {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 13px;
+  background-color: seagreen;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.services-page button[type="submit"]:hover {
+  background-color: darkgreen;
+}
+
+/* =================================
+   BOOKING PAGE
+================================= */
+
+.booking-page {
+  min-height: 100vh;
+  background-color: honeydew;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+
+.booking-page header {
+  background-color: seagreen;
+  padding: 15px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-page header h2 {
+  color: white;
+  margin: 0;
+}
+
+.booking-page nav {
+  display: flex;
+  gap: 20px;
+}
+
+.booking-page nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.booking-page nav a:hover {
+  color: palegreen;
+}
+
+/* Main Booking Section */
+
+.booking-page section {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px lightgray;
+}
+
+.booking-page section h1 {
+  text-align: center;
+  color: seagreen;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.booking-page section h2 {
+  color: darkslategrey;
+  font-size: 21px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+/* Booking Headings */
+
+.booking-page form h3 {
+  color: seagreen;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Selected Services Table */
+
+.booking-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  border: 1px solid lightgray;
+}
+
+.booking-page th {
+  background-color: seagreen;
+  color: white;
+  padding: 13px;
+  text-align: left;
+}
+
+.booking-page td {
+  padding: 13px;
+  color: darkslategrey;
+  border-bottom: 1px solid lightgray;
+}
+
+.booking-page tr:last-child {
+  background-color: honeydew;
+  font-weight: bold;
+}
+
+.booking-page tr:last-child th {
+  background-color: #d9efdf;
+  color: darkgreen;
+}
+
+/* Booking Form */
+
+.booking-page form {
+  margin-top: 20px;
+}
+
+.booking-page form label {
+  display: block;
+  color: darkslategrey;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.booking-page form input[type="text"],
+.booking-page input[type="date"],
+.booking-page input[type="time"],
+.booking-page textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid silver;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.booking-page form input::placeholder {
+  color: darkgray;
+}
+
+.booking-page form input[name="pincode"] {
+  max-width: 250px;
+}
+
+.booking-page input:focus,
+.booking-page textarea:focus {
+  outline: none;
+  border: 1px solid seagreen;
+}
+
+/* Confirm Booking Button */
+
+.booking-page button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  background-color: seagreen;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.booking-page button:hover {
+  background-color: darkgreen;
+}
+
+/* Error Message */
+
+.booking-page .error-message {
+  color: red;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* =================================
+   BOOKING SUCCESS PAGE
+================================= */
+
+.booking-success-page {
+  min-height: 100vh;
+  background-color: honeydew;
+}
+
+.success-container {
+  max-width: 650px;
+  margin: 45px auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px lightgray;
+}
+
+/* Success Icon */
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  background-color: seagreen;
+  color: white;
+  border-radius: 50%;
+  font-size: 38px;
+  line-height: 65px;
+}
+
+/* Headings */
+
+.success-container h1 {
+  color: seagreen;
+  font-size: 30px;
+}
+
+.success-container h2 {
+  color: darkslategrey;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  color: dimgray;
+  line-height: 1.6;
+}
+
+/* Booking Details */
+
+.booking-details {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: honeydew;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.booking-details h2,
+.booking-details h3 {
+  color: seagreen;
+}
+
+.booking-details p {
+  color: darkslategrey;
+  line-height: 1.7;
+  border-bottom: 1px solid #dce9df;
+  padding-bottom: 8px;
+}
+
+.booking-status {
+  color: darkorange;
+  font-weight: bold;
+}
+
+/* Thank You Message */
+
+.thank-you {
+  color: seagreen;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+/* Dashboard Button */
+
+.dashboard-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 25px;
+  background-color: seagreen;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.dashboard-btn:hover {
+  background-color: darkgreen;
+}
+
+/* =================================
+   MY BOOKINGS PAGE
+================================= */
+
+.my-bookings-page {
+  min-height: 100vh;
+  background-color: honeydew;
+}
+
+.my-bookings-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px lightgray;
+}
+
+.my-bookings-container h1 {
+  color: seagreen;
+  text-align: center;
+}
+
+.my-bookings-container > p {
+  text-align: center;
+  color: dimgray;
+  margin-bottom: 30px;
+}
+
+.booking-table-container {
+  overflow-x: auto;
+}
+
+.booking-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.booking-table-container th {
+  background-color: seagreen;
+  color: white;
+  padding: 13px;
+}
+
+.booking-table-container td {
+  padding: 13px;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.booking-table-container tr:hover {
+  background-color: honeydew;
+}
+
+/* Booking Buttons */
+
+.view-booking-btn,
+.back-dashboard-btn {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: seagreen;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-booking-btn:hover,
+.back-dashboard-btn:hover {
+  background-color: darkgreen;
+}
+
+/* Empty Booking Message */
+
+.no-bookings {
+  text-align: center;
+  padding: 30px;
+  background-color: honeydew;
+  border-radius: 10px;
+}
+
+.no-bookings h3 {
+  color: seagreen;
+}
+
+.no-bookings a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: seagreen;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* =================================
+   BOOKING DETAILS PAGE
+================================= */
+
+.booking-details-page {
+  min-height: 100vh;
+  background-color: honeydew;
+}
+
+.booking-details-container {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px lightgray;
+}
+
+.booking-details-container h1 {
+  color: seagreen;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-details-container h2 {
+  color: seagreen;
+  margin-top: 30px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+.booking-details-container h3 {
+  color: darkslategrey;
+}
+
+.booking-details-container p {
+  color: darkslategrey;
+  line-height: 1.7;
+}
+
+.booking-details-container .booking-status {
+  color: darkorange;
+  font-weight: bold;
+}
+
+.booking-details-container .back-dashboard-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background-color: seagreen;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.booking-details-container .back-dashboard-btn:hover {
+  background-color: darkgreen;
+}
+
+/* =================================
+   CANCEL BOOKING BUTTON
+================================= */
+
+.cancel-booking-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 9px 15px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-booking-btn:hover {
+  background-color: darkred;
+}
+
+/* =================================
+   MY PROFILE PAGE
+================================= */
+
+.profile-page {
+  min-height: 100vh;
+  background-color: honeydew;
+}
+
+.profile-container {
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px lightgray;
+}
+
+.profile-container h1 {
+  color: seagreen;
+  text-align: center;
+}
+
+.profile-container > p {
+  text-align: center;
+  color: dimgray;
+}
+
+.profile-container label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: darkslategrey;
+  font-weight: bold;
+}
+
+.profile-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid silver;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.profile-container input:focus {
+  outline: none;
+  border-color: seagreen;
+}
+
+.profile-container button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px;
+  background-color: seagreen;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile-container button:hover {
+  background-color: darkgreen;
+}
+
+.profile-success {
+  color: green !important;
+  background-color: honeydew;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.profile-error {
+  color: red !important;
+  background-color: #ffecec;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.profile-back-btn {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+  padding: 10px 18px;
+  background-color: darkslategrey;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* =================================
+   COMMON RESPONSIVE DESIGN
+================================= */
+
+/* Tablets */
+
+@media screen and (max-width: 900px) {
+  .services-page .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices */
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 7px;
+  }
+
+  .hero {
+    min-height: 400px;
+    padding: 40px 7%;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .services h2,
+  .about h2,
+  .why-us h2,
+  .how-it-works h2,
+  .review h2 {
+    font-size: 26px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .form-row input {
+    width: 100%;
+  }
+}
+
+/* Smaller Mobile Devices */
+
+@media screen and (max-width: 600px) {
+  /* Services Page */
+
+  .services-page header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .services-page nav {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .services-page section {
+    padding: 30px 5%;
+  }
+
+  .services-page section h1 {
+    font-size: 24px;
+  }
+
+  .services-page .service-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page .service-card {
+    padding: 20px;
+  }
+
+  /* Login Page */
+
+  .login-page form {
+    padding: 25px 20px;
+  }
+
+  .login-page h2 {
+    font-size: 25px;
+  }
+
+  /* Booking Page */
+
+  .booking-page header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .booking-page nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .booking-page section {
+    width: 94%;
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  .booking-page section h1 {
+    font-size: 24px;
+  }
+
+  .booking-page section h2 {
+    font-size: 19px;
+  }
+
+  .booking-page table th,
+  .booking-page table td {
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .booking-page form input[type="text"],
+  .booking-page input[type="date"],
+  .booking-page input[type="time"],
+  .booking-page textarea {
+    font-size: 14px;
+  }
+
+  .booking-page form input[name="pincode"] {
+    max-width: 100%;
+  }
+
+  /* Booking Success Page */
+
+  .success-container {
+    width: 94%;
+    margin: 25px auto;
+    padding: 20px;
+  }
+
+  .success-container h1 {
+    font-size: 24px;
+  }
+
+  .booking-details {
+    padding: 15px;
+  }
+
+  /* My Bookings Page */
+
+  .my-bookings-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  /* Booking Details Page */
+
+  .booking-details-container {
+    width: 94%;
+    margin: 25px auto;
+    padding: 20px;
+  }
+
+  /* My Profile Page */
+
+  .profile-container {
+    width: 94%;
+    padding: 20px;
+  }
+}
+
+/* Login Page Register Link */
+
+.login-page .register-link {
+  text-align: center;
+  margin-top: 22px;
+  color: dimgray;
+  font-size: 14px;
+}
+
+.login-page .register-link a {
+  color: seagreen;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-page .register-link a:hover {
+  text-decoration: underline;
+}
+
+.login-page .login-message {
+  color: red;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* =================================
+   SERVICES PAGE - DESIGN IMPROVEMENTS
+================================= */
+
+.services-page {
+  background-color: #f4f8f5;
+}
+
+/* Page Introduction */
+
+.services-intro {
+  text-align: center;
+  padding: 55px 20px 35px;
+  background: linear-gradient(135deg, #e2f3e8, #ffffff);
+}
+
+.services-subtitle {
+  color: seagreen;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.services-intro h1 {
+  color: #205c3e;
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.services-intro > p:last-child {
+  color: #68796f;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Section Headings */
+
+.services-page section > h1 {
+  color: #205c3e;
+  text-align: center;
+  font-size: 29px;
+}
+
+.services-page section > p {
+  color: #718078;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* Package Cards */
+
+.package-section {
+  padding-top: 45px;
+}
+
+.package-card {
+  text-align: center;
+  justify-content: center !important;
+  align-items: center;
+  min-height: 230px !important;
+  background: linear-gradient(145deg, white, #eaf6ee) !important;
+  border: 1px solid #cfe5d6 !important;
+}
+
+.package-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.package-card h3 {
+  font-size: 21px !important;
+}
+
+.package-card h4 {
+  color: seagreen !important;
+  font-size: 25px !important;
+  margin: 12px 0 !important;
+}
+
+/* Individual Services Grid */
+
+.individual-services {
+  padding-top: 50px !important;
+}
+
+.services-page .individual-services .service-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Individual Service Cards */
+
+.services-page .individual-services .service-card {
+  display: block;
+  padding: 0;
+  min-height: 0;
+  background-color: white;
+  border-radius: 13px;
+  overflow: hidden;
+  border: 1px solid #e0eae3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.services-page .individual-services .service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Service Images */
+
+.services-page .service-image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.services-page .individual-services .service-card:hover .service-image {
+  transform: scale(1.04);
+}
+
+/* Service Content */
+
+.service-content {
+  padding: 20px;
+}
+
+.services-page .service-content h3 {
+  color: #226b49;
+  font-size: 19px;
+  margin: 0 0 12px;
+}
+
+.services-page .service-content p {
+  color: #718078;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 45px;
+}
+
+.services-page .service-content h4 {
+  color: #205c3e;
+  font-size: 17px;
+  margin: 15px 0;
+}
+
+/* Service Selection */
+
+.services-page .service-content label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 11px;
+  margin-top: 15px;
+  background-color: #e9f5ed;
+  border-radius: 7px;
+  color: #26764f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.services-page .service-content label:hover {
+  background-color: #d6ecdd;
+}
+
+/* Booking Summary */
+
+.services-page .booking-summary {
+  padding: 30px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e0f1e5, #f4fbf6);
+  border: 1px solid #c2dfca;
+}
+
+.services-page .booking-summary p {
+  color: #718078;
+}
+
+.services-page .booking-summary h3 {
+  font-size: 32px;
+  color: seagreen;
+}
+
+/* Proceed Button */
+
+.services-page #proceed-booking {
+  max-width: 300px;
+  margin: 25px auto 50px;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.services-page #proceed-booking:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 900px) {
+  .services-page .individual-services .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services-intro h1 {
+    font-size: 28px;
+  }
+
+  .services-page .individual-services .service-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page .service-image {
+    height: 210px;
+  }
+
+  .services-page section > h1 {
+    font-size: 24px;
+  }
+}
+
+/* Customer Page Navigation */
+
+.customer-header {
+  background-color: seagreen;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 26px;
+}
+
+.customer-header nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.customer-header nav a:hover {
+  color: #c8f5df;
+}
+
+@media (max-width: 768px) {
+  .customer-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .customer-header nav {
+    text-align: center;
+    line-height: 2.5;
+  }
+
+  .customer-header nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+}
+
+/* =================================
+   SERVICES PAGE - COMPACT LAYOUT
+================================= */
+
+/* Reduce introduction height */
+
+.services-intro {
+  padding: 30px 20px 20px;
+}
+
+.services-intro h1 {
+  font-size: 34px;
+  margin: 8px 0;
+}
+
+.services-intro > p:last-child {
+  margin-bottom: 10px;
+}
+
+/* Reduce section spacing */
+
+.services-page section {
+  padding: 30px 5%;
+}
+
+.services-page section > h1 {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.services-page section > p {
+  margin-bottom: 22px;
+}
+
+/* Four package cards in one row */
+
+.services-page .package-section .service-container {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.services-page .package-card {
+  min-height: 190px !important;
+  padding: 18px !important;
+}
+
+.services-page .package-icon {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.services-page .package-card h3 {
+  font-size: 18px !important;
+  margin: 8px 0;
+}
+
+.services-page .package-card p {
+  min-height: auto;
+  margin: 5px 0;
+}
+
+.services-page .package-card h4 {
+  font-size: 22px !important;
+  margin: 8px 0 !important;
+}
+
+/* Four individual service cards in one row */
+
+.services-page .individual-services .service-container {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Reduce service card image height */
+
+.services-page .service-image {
+  height: 150px;
+}
+
+/* Reduce service card content spacing */
+
+.services-page .service-content {
+  padding: 15px;
+}
+
+.services-page .service-content h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.services-page .service-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 40px;
+  margin: 8px 0;
+}
+
+.services-page .service-content h4 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.services-page .service-content label {
+  padding: 9px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Clear Package Button */
+
+.services-page #clear-package {
+  margin-top: 18px;
+}
+
+/* Booking Summary */
+
+.services-page .booking-summary {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.services-page .booking-summary h2 {
+  margin-top: 5px;
+  font-size: 23px;
+}
+
+/* Responsive Layout */
+
+/* Medium screens */
+
+@media screen and (max-width: 1100px) {
+  .services-page .package-section .service-container,
+  .services-page .individual-services .service-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets */
+
+@media screen and (max-width: 800px) {
+  .services-page .package-section .service-container,
+  .services-page .individual-services .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 550px) {
+  .services-intro {
+    padding: 25px 15px;
+  }
+
+  .services-intro h1 {
+    font-size: 27px;
+  }
+
+  .services-page .package-section .service-container,
+  .services-page .individual-services .service-container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page .service-image {
+    height: 190px;
+  }
+}
+
+/* Login Page Navigation */
+
+.login-page .customer-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* CleanNest Website Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.message {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: red;
+}
+
+/* .message.error {
+  color: red;
+} */
+
+.message.success {
+  color: seagreen;
+}
+
+/* Shared CleanNest logo on all customer pages */
+.customer-header .logo,
+.services-head .logo,
+.booking-page header .logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.customer-header .logo img,
+.services-head .logo img,
+.booking-page header .logo img {
+  display: block;
+  height: 56px;
+  max-width: 190px;
+  width: auto;
+  object-fit: contain;
+}
+
+.register-body {
+  padding-top: 0;
+}
+
+.register-header {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .customer-header .logo img,
+  .services-head .logo img,
+  .booking-page header .logo img {
+    height: 48px;
+  }
+}
