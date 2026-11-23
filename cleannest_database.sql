@@ -199,4 +199,21 @@ VALUES
 
 SELECT * FROM package_services;
 
-show tables;
+CREATE TABLE password_resets (
+    reset_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    reset_token VARCHAR(64) NOT NULL,
+    expiry_time DATETIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+        ON DELETE CASCADE
+);
+
+
+
+
+
+
+ 
+
+ 
