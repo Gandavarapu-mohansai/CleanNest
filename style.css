@@ -907,6 +907,25 @@ body:has(.register-page) {
 
 /* Booking Form */
 
+/* Area dropdown styling */
+select[name="area_id"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #c5c5c5;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Dropdown focus effect */
+select[name="area_id"]:focus {
+  outline: none;
+  border-color: #2e8b57;
+}
+
 .booking-page form {
   margin-top: 20px;
 }

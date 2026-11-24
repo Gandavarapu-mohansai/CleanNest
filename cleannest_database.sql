@@ -209,11 +209,132 @@ CREATE TABLE password_resets (
         ON DELETE CASCADE
 );
 
+select * from users;
+
+--  Store service areas covered by CleanNest
+
+CREATE TABLE service_areas (
+    area_id INT AUTO_INCREMENT PRIMARY KEY,
+    area_name VARCHAR(100) NOT NULL,
+    pincode VARCHAR(6) NOT NULL,
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    UNIQUE (area_name, pincode)
+);
+
+--  Store worker details
+CREATE TABLE workers (
+    worker_id INT AUTO_INCREMENT PRIMARY KEY,
+    worker_name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    status ENUM('Active', 'Working', 'Inactive') DEFAULT 'Active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+--  Store the areas covered by each worker
+CREATE TABLE worker_areas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    worker_id INT NOT NULL,
+    area_id INT NOT NULL,
+
+    FOREIGN KEY (worker_id) REFERENCES workers(worker_id),
+    FOREIGN KEY (area_id) REFERENCES service_areas(area_id),
+
+    UNIQUE (worker_id, area_id)
+);
+
+--  Store worker booking assignments and work history
+CREATE TABLE worker_assignments (
+    assignment_id INT AUTO_INCREMENT PRIMARY KEY,
+    booking_id INT NOT NULL,
+    worker_id INT NOT NULL,
+    start_time DATETIME NOT NULL,
+    expected_end_time DATETIME NOT NULL,
+    actual_end_time DATETIME DEFAULT NULL,
+    status ENUM('Assigned', 'Working', 'Work Done') DEFAULT 'Assigned',
+
+    INDEX idx_booking_id (booking_id),
+
+    FOREIGN KEY (booking_id) REFERENCES bookings(booking_id),
+    FOREIGN KEY (worker_id) REFERENCES workers(worker_id)
+);
+
+--  Connect each booking with its selected service area
+ALTER TABLE bookings
+ADD COLUMN area_id INT NULL,
+ADD FOREIGN KEY (area_id) REFERENCES service_areas(area_id);
 
 
+INSERT INTO service_areas (area_name, pincode, status) VALUES
+('Madhapur', '500081', 'active'),
+('Gachibowli', '500032', 'active'),
+('Kondapur', '500084', 'active'),
+('Kukatpally', '500072', 'active'),
+('Miyapur', '500049', 'active'),
+('Hitech City', '500081', 'active'),
+('Banjara Hills', '500034', 'active'),
+('Jubilee Hills', '500033', 'active'),
+('Ameerpet', '500016', 'active'),
+('Begumpet', '500016', 'active');
 
 
+SHOW INDEX FROM worker_assignments;
 
+USE cleannest_db;
+
+SELECT
+    CONSTRAINT_NAME,
+    COLUMN_NAME,
+    REFERENCED_TABLE_NAME,
+    REFERENCED_COLUMN_NAME
+FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+WHERE TABLE_SCHEMA = 'cleannest_db'
+AND TABLE_NAME = 'worker_assignments'
+AND REFERENCED_TABLE_NAME IS NOT NULL;
+
+ALTER TABLE worker_assignments
+DROP FOREIGN KEY worker_assignments_ibfk_1;
  
+ ALTER TABLE worker_assignments
+DROP INDEX booking_id;
+ALTER TABLE worker_assignments
+ADD INDEX idx_booking_id (booking_id);
 
- 
+ALTER TABLE worker_assignments
+ADD CONSTRAINT worker_assignments_ibfk_1
+FOREIGN KEY (booking_id)
+REFERENCES bookings(booking_id);
+
+SHOW INDEX FROM worker_assignments;
+
+DESCRIBE bookings;
+
+DESCRIBE bhk_packages;
+
+SELECT package_id, package_name, bhk_type
+FROM bhk_packages;
+
+DESCRIBE booking_services;
+
+SELECT booking_id, package_id, area_id, booking_date, booking_time
+FROM bookings
+ORDER BY booking_id DESC
+LIMIT 5;
+
+ALTER TABLE bookings
+ADD COLUMN required_workers INT NULL,
+ADD COLUMN expected_duration_hours DECIMAL(4,1) NULL,
+ADD COLUMN worker_assignment_status VARCHAR(30)
+DEFAULT 'Not Assigned';
+
+DESCRIBE workers;
+DESCRIBE worker_areas;
+DESCRIBE worker_assignments;
+
+ALTER TABLE workers
+MODIFY status ENUM(
+    'Active',
+    'Working',
+    'On Leave',
+    'Absent',
+    'Inactive'
+) DEFAULT 'Active';
